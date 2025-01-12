@@ -1,0 +1,47 @@
+@use "../custom" as *;
+
+.full-image-section {
+    position: relative;
+    width: 100%;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto; /* Keeps aspect ratio */
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.overlay-text {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.btn {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem 2rem;
+    border: 2px solid #000; /* Bold outline for the button */
+    background-color: transparent;
+    color: #000;
+}
+
+.btn:hover {
+    background-color: #000;
+    color: #fff;
+}
