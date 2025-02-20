@@ -1,6 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google"; // Font
 import "./globals.css"; //Css file for global styles
-import Header from "./components/Header"; // Header component
+import Header from "./components/header"; // Header component
 import Footer from "./components/footer"; // Footer component
 import "bootstrap/dist/css/bootstrap.min.css"; // Bootstrap CSS
 import "bootstrap/dist/js/bootstrap.bundle.min.js"; // Bootstrap JS
