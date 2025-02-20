@@ -1,9 +1,9 @@
 export default function Header() {
     return (
         <header style={styles.header}>
-            <h1>My Website</h1>
+            <h1>mywebsite</h1>
             <nav>
-                <a href="/">Home</a> | <a href="/about">About</a>
+                <a href="/page">Home</a> | <a href="/about">About</a>
             </nav>
         </header>
     );

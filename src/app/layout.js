@@ -1,9 +1,9 @@
 import { Geist, Geist_Mono } from "next/font/google"; // Font
 import "./globals.css"; //Css file for global styles
-import Header from "./components/header"; // Header component
+import Header from "./components/Header"; // Header component
 import Footer from "./components/footer"; // Footer component
 import "bootstrap/dist/css/bootstrap.min.css"; // Bootstrap CSS
-import "bootstrap/dist/js/bootstrap.bundle.min.js"; // Bootstrap JS
+import BootstrapProvider from "./BootstrapProvider"; // Import the component to use bootstrap
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -23,12 +23,14 @@ export const metadata = {
 // Landing page Layout. Every page of the website will have this structure
 export default function RootLayout({ children }) {
     return (
-        <html lang="en">
-            <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-                <Header />
-                {children}
-                <Footer />
-            </body>
-        </html>
+        <BootstrapProvider>
+            <html lang="en">
+                <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+                    <Header />
+                    {children}
+                    <Footer />
+                </body>
+            </html>
+        </BootstrapProvider>
     );
 }
